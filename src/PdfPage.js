@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
-import { Document, Page } from 'react-pdf';
-import CVJPCL from './CVJPCL.pdf';
+import { Document } from 'react-pdf';
 
 export default function PdfPage() {
   const [numPages, setNumPages] = useState(null);
@@ -12,12 +11,8 @@ export default function PdfPage() {
 
   return (
     <div>
-      <Document file="Dossier de Competências Joao Lopes EN.pdf" onLoadSuccess={onDocumentLoadSuccess}>
-        <Page pageNumber={pageNumber} />
+      <Document file="CVJPCL.pdf" onLoadSuccess={onDocumentLoadSuccess}>
       </Document>
-      <p>
-        Page {pageNumber} of {numPages}
-      </p>
     </div>
   );
 }
