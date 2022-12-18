@@ -5,6 +5,7 @@ import cv from './CVJPCL.jpg';
 function App() {
   return (
     <div className="App">
+      <h1>Test</h1>
       {/* <PdfPage /> */}
       <img style={{ width: "100%", height: "100%" }} src={cv} alt="pdf" />
     </div>
